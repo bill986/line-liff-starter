@@ -1,81 +1,30 @@
-window.onload = function (e) {
-    document.getElementById('lineuserid').value="123";
-    liff.init(function (data) {
-        initializeApp(data);
-    });
-};
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFF Starter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-$('.message a').click(function(){
-    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-});
-
-function initializeApp(data) {
-    document.getElementById('languagefield').textContent = data.language;
-    document.getElementById('viewtypefield').textContent = data.context.viewType;
-    document.getElementById('useridfield').textContent = data.context.userId;
-    document.getElementById('utouidfield').textContent = data.context.utouId;
-    document.getElementById('roomidfield').textContent = data.context.roomId;
-    document.getElementById('groupidfield').textContent = data.context.groupId;
-
-    // openWindow call
-    document.getElementById('openwindowbutton').addEventListener('click', function () {
-        liff.openWindow({
-            url: 'https://line.me'
-        });
-    });
-
-    // closeWindow call
-    document.getElementById('closewindowbutton').addEventListener('click', function () {
-        liff.closeWindow();
-    });
-
-    // sendMessages call
-    document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        liff.sendMessages([{  
-            "type":"postback",
-            "label":"Buy",
-            "data":"action=buy&itemid=111",
-            "text":"Buy"
-         }]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
-            window.alert("Error sending message: " + error);
-        });
-    });
-
-    // sendMessages call
-    document.getElementById('sendmessagebutton2').addEventListener('click', function () {
-        liff.sendMessages([{
-            type: 'text',
-            text: "successfully sent a message!"
-        }]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
-            window.alert("Error sending message: " + error);
-        });
-    });
-
-    document.getElementById('sendmessagebutton3').addEventListener('click', function () {
-        liff.sendMessages([{  
-            "type":"postback",
-            "label":"Buy",
-            "data":"action=buy&itemid=111",
-            "text":"Buy"
-         }]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
-            window.alert("Error sending message: " + error);
-        });
-    });
-
+<body>
+        <div class="login-page">
+                <div class="form">
+                    <form class="register-form">
+                        <input id="lineuserid" type="text" placeholder="lineuserid" />
+                        <input id="name" type="text" placeholder="name"/>
+                        <input id="password" type="password" placeholder="password"/>
+                        <input type="text" placeholder="email address"/>
+                        <button>create</button>
+                        <p class="message">Already registered? <a href="#">Sign In</a></p>
+                    </form>
+                    <form class="login-form">
+                            <input id="lineuserid" type="text" placeholder="lineuserid" />
+                        <input id="username" type="text" placeholder="username"/>
+                        <input id="password" type="password" placeholder="password"/>
+                        <button>login</button>
+                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    </form>
+                </div>
+            </div>
     
-}
-
-function toggleProfileData() {
-    var elem = document.getElementById('authcode');
-    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
-        elem.style.display = "none";
-    } else {
-        elem.style.display = "block";
-    }
-}
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="liff-starter.js"></script>
+</body>
