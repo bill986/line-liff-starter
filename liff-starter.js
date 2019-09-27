@@ -5,6 +5,10 @@ window.onload = function (e) {
     });
 };
 
+$('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
 function initializeApp(data) {
     document.getElementById('languagefield').textContent = data.language;
     document.getElementById('viewtypefield').textContent = data.context.viewType;
