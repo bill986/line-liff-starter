@@ -92,6 +92,7 @@ function initializeApp(data) {
 
 function toggleProfileData() {
     var elem = document.getElementById('authcode');
+    console.log(elem.offsetWidth)
     if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
         elem.style.display = "none";
     } else {
