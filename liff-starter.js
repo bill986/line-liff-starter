@@ -26,9 +26,11 @@ function initializeApp(data) {
 
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        liff.sendMessages({
-            type: 'text',
-            text: "successfully sent a message!"
+        liff.sendMessages({  
+            "type":"postback",
+            "label":"Buy",
+            "data":"action=buy&itemid=111",
+            "text":"Buy"
         }).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
