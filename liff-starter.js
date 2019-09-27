@@ -67,9 +67,11 @@ function initializeApp(data) {
 
 function sendauthcode() {
     var elem = document.getElementById('authcode');
+    console.log(elem.style.display)
     elem.style.display = "block"
 }
 function cancelauthcode() {
     var elem = document.getElementById('authcode');
+    console.log(elem.style.display)
     elem.style.display = "none"
 }
