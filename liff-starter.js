@@ -36,6 +36,18 @@ function initializeApp(data) {
         });
     });
 
+    // sendMessages call
+    document.getElementById('sendmessagebutton2').addEventListener('click', function () {
+        liff.sendMessages([{
+            type: 'text',
+            text: "successfully sent a message!"
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+
     //get profile call
     document.getElementById('getprofilebutton').addEventListener('click', function () {
         liff.getProfile().then(function (profile) {
