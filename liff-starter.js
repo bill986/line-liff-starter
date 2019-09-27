@@ -1,4 +1,5 @@
 window.onload = function (e) {
+    document.getElementById('lineuserid').value="123";
     liff.init(function (data) {
         initializeApp(data);
     });
@@ -63,15 +64,14 @@ function initializeApp(data) {
         });
     });
 
+    
 }
 
-function sendauthcode() {
+function toggleProfileData() {
     var elem = document.getElementById('authcode');
-    console.log(elem.style.display)
-    elem.style.display = "block"
-}
-function cancelauthcode() {
-    var elem = document.getElementById('authcode');
-    console.log(elem.style.display)
-    elem.style.display = "none"
+    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
+        elem.style.display = "none";
+    } else {
+        elem.style.display = "block";
+    }
 }
