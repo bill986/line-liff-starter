@@ -63,18 +63,13 @@ function initializeApp(data) {
         });
     });
 
-    //get profile call
-    document.getElementById('getprofilebutton').addEventListener('click', function () {
-        document.getElementById('code').textContent = "text";
-        toggleProfileData();
-    });
 }
 
-function toggleProfileData() {
+function sendauthcode() {
     var elem = document.getElementById('authcode');
-    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
-        elem.style.display = "none";
-    } else {
-        elem.style.display = "block";
-    }
+    elem.style.display = "block"
+}
+function cancelauthcode() {
+    var elem = document.getElementById('authcode');
+    elem.style.display = "none"
 }
