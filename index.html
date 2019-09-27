@@ -21,16 +21,16 @@
     <div id="authcode" >
         <table>
             <form class="login-form">
-                <input type="text" placeholder="認證碼" value="George"/>
-                <button onclick="toggleProfileData()">確定</button>
+                <input id="code" type="text" placeholder="認證碼" />
+                <button onclick="toggleProfileData()" >確定</button>
             </form>
         </table>
     </div> 
 
     <div class="register-form">
         <form class="login-form">
-            <input type="text" placeholder="username1"/>
-            <button onclick="toggleProfileData()">login</button>
+            <input id="username" type="text" placeholder="username"/>
+            <button id="getprofilebutton">login</button>
         </form>
     </div>
     
