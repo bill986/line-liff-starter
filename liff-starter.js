@@ -95,3 +95,12 @@ function toggleProfileData() {
         elem.style.display = "block";
     }
 }
+
+function toggleProfileData1() {
+    var elem = document.getElementById('authcode');
+    if (elem.style.display = "block") {
+        elem.style.display = "block";
+    } else {
+        elem.style.display = "block";
+    }
+}
