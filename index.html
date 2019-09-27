@@ -1,11 +1,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIFF Starter</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://bill986.github.io/line-liff-starter/style.css">
 </head>
 
 <body>
-    <div class="buttongroup">
+    <!-- <div class="buttongroup">
         <div class="buttonrow">
             <button id="openwindowbutton">打開網頁</button>
             <button id="closewindowbutton">關閉視窗</button>
@@ -17,10 +17,10 @@
             <button id="sendmessagebutton3">Send Message3</button>
         </div>
     </div>
-
+-->
     <div id="authcode">
         <h2>Profile</h2>
-        <!-- <a href="#" onclick="toggleProfileData()">Close Profile</a> -->
+        <a href="#" onclick="toggleProfileData()">Close Profile</a>
         <div id="profilepicturediv">
         </div>
         <table border="1">
@@ -29,23 +29,14 @@
                 <td id="authcode"></td>
             </tr>
         </table>
-    </div>
+    </div> 
 
     <div class="register-form">
-        <form class="register-form">
-          <input type="text" placeholder="name"/>
-          <input type="password" placeholder="password"/>
-          <input type="text" placeholder="email address"/>
-          <button>create</button>
-          <p class="message">Already registered? <a href="#">Sign In</a></p>
-        </form>
         <form class="login-form">
-          <input type="text" placeholder="username"/>
-          <input type="password" placeholder="password"/>
-          <button>login</button>
-          <p class="message">Not registered? <a href="#">Create an account</a></p>
+            <input type="text" placeholder="username"/>
+            <button onclick="toggleProfileData()">login</button>
         </form>
-      </div>
+    </div>
     
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="https://bill986.github.io/line-liff-starter/liff-starter.js"></script>
