@@ -18,56 +18,34 @@
         </div>
     </div>
 
-    <div id="profileinfo">
+    <div id="authcode">
         <h2>Profile</h2>
-        <a href="#" onclick="toggleProfileData()">Close Profile</a>
+        <!-- <a href="#" onclick="toggleProfileData()">Close Profile</a> -->
         <div id="profilepicturediv">
         </div>
         <table border="1">
             <tr>
-                <th>userId</th>
-                <td id="useridprofilefield"></td>
-            </tr>
-            <tr>
-                <th>displayName</th>
-                <td id="displaynamefield"></td>
-            </tr>
-            <tr>
-                <th>statusMessage</th>
-                <td id="statusmessagefield"></td>
+                <th>請輸入認證碼</th>
+                <td id="authcode"></td>
             </tr>
         </table>
     </div>
 
-    <div id="liffdata">
-        <h2>LIFF Data</h2>
-        <table border="1">
-            <tr>
-                <th>language</th>
-                <td id="languagefield"></td>
-            </tr>
-            <tr>
-                <th>context.viewType</th>
-                <td id="viewtypefield"></td>
-            </tr>
-            <tr>
-                <th>context.userId</th>
-                <td id="useridfield"></td>
-            </tr>
-            <tr>
-                <th>context.utouId</th>
-                <td id="utouidfield"></td>
-            </tr>
-            <tr>
-                <th>context.roomId</th>
-                <td id="roomidfield"></td>
-            </tr>
-            <tr>
-                <th>context.groupId</th>
-                <td id="groupidfield"></td>
-            </tr>
-        </table>
-    </div>
+    <div class="register-form">
+        <form class="register-form">
+          <input type="text" placeholder="name"/>
+          <input type="password" placeholder="password"/>
+          <input type="text" placeholder="email address"/>
+          <button>create</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form">
+          <input type="text" placeholder="username"/>
+          <input type="password" placeholder="password"/>
+          <button>login</button>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+      </div>
     
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="https://bill986.github.io/line-liff-starter/liff-starter.js"></script>
