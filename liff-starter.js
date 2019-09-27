@@ -1,8 +1,4 @@
 window.onload = function (e) {
-    var elem = document.getElementById('authcode');
-    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
-        elem.style.display = "none";
-    }
     liff.init(function (data) {
         initializeApp(data);
     });
@@ -93,7 +89,7 @@ function initializeApp(data) {
 function toggleProfileData() {
     var elem = document.getElementById('authcode');
     console.log(elem.offsetWidth)
-    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
+    if (elem.style.display = "block") {
         elem.style.display = "none";
     } else {
         elem.style.display = "block";
