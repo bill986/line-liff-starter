@@ -1,4 +1,8 @@
 window.onload = function (e) {
+    var elem = document.getElementById('authcode');
+    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
+        elem.style.display = "none";
+    }
     liff.init(function (data) {
         initializeApp(data);
     });
