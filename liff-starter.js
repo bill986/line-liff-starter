@@ -50,6 +50,19 @@ function initializeApp(data) {
         });
     });
 
+    document.getElementById('sendmessagebutton3').addEventListener('click', function () {
+        liff.sendMessages([{  
+            "type":"postback",
+            "label":"Buy",
+            "data":"action=buy&itemid=111",
+            "text":"Buy"
+         }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+
     //get profile call
     document.getElementById('getprofilebutton').addEventListener('click', function () {
         liff.getProfile().then(function (profile) {
