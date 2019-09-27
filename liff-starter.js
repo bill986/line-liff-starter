@@ -87,7 +87,7 @@ function initializeApp(data) {
 }
 
 function toggleProfileData() {
-    var elem = document.getElementById('profileinfo');
+    var elem = document.getElementById('authcode');
     if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
         elem.style.display = "none";
     } else {
