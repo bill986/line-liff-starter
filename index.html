@@ -5,33 +5,24 @@
 </head>
 
 <body>
-    <!-- <div class="buttongroup">
-        <div class="buttonrow">
-            <button id="openwindowbutton">打開網頁</button>
-            <button id="closewindowbutton">關閉視窗</button>
-        </div>
-        <div class="buttonrow">
-            <button id="getprofilebutton">Get Profile</button>
-            <button id="sendmessagebutton">Send Message</button>
-            <button id="sendmessagebutton2">Send Message2</button>
-            <button id="sendmessagebutton3">Send Message3</button>
-        </div>
-    </div>
--->
-    <div id="authcode" style= "display:none">
-        <table>
-            <form class="login-form">
-                <input id="code" type="text" placeholder="認證碼" />
-                <button onclick="cancelauthcode()" >確定</button>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input id="lineuserid" type="text" placeholder="lineuserid" />
+                <input id="name" type="text" placeholder="name"/>
+                <input id="password" type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
-        </table>
-    </div> 
-
-    <div id="login" style= "display:block">
-        <form class="login-form">
-            <input id="username" type="text" placeholder="username"/>
-            <button onclick="sendauthcode()">login</button>
-        </form>
+            <form class="login-form">
+                    <input id="lineuserid" type="text" placeholder="lineuserid" />
+                <input id="username" type="text" placeholder="username"/>
+                <input id="password" type="password" placeholder="password"/>
+                <button>login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
     </div>
     
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
